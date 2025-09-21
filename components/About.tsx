@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <section
@@ -26,12 +28,12 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="mt-10">
-          <a
+          <Link
             href="/#contact"
             className="px-8 py-3 border border-[#cc5500] text-[#cc5500] font-semibold rounded-lg shadow-md hover:bg-gray-100"
           >
             Let’s Work Together
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
+"use client";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 export default function Hero() {
   return (
     <section
@@ -6,7 +8,7 @@ export default function Hero() {
       className="h-screen flex flex-col md:flex-row items-center justify-between px-10 md:px-20 pt-28 md:pt-32 bg-[#ececec]">
       {/* Left */}
       <div className="max-w-lg">
-        <p className="text-gray-700 font-semibold text-2xl">Hello, I'm</p>
+        <p className="text-gray-700 font-semibold text-2xl">Hello, I&apos;m</p>
         <h1 className="text-5xl font-extrabold text-[#cc5500]">Taiwo Alayande</h1>
         <h2 className="text-2xl text-gray-700 mt-2">
           Professional Web Developer
@@ -50,9 +52,11 @@ export default function Hero() {
 
       {/* Right */}
       <div className="w-[50%] mt-10 md:mt-0 p-5">
-      <img
+      <Image
           src="/HeroImage.png"
           alt="Profile"
+          width={500}
+          height={500}
           className="w-[90%] shadow-[0_20px_50px_-10px_[#ececec]]"
         />
       </div>
