@@ -1,5 +1,7 @@
+"use client"; 
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiMongodb, SiJavascript, SiTypescript, SiExpress } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function TechStackPage() {
   const techStack = [
@@ -21,19 +23,42 @@ export default function TechStackPage() {
     <section
       className="min-h-screen flex flex-col justify-center items-center px-6 md:px-20 py-20 bg-[white] text-[#040d31]"
     >
-      <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-[#cc5500]">My Tech Stack</h2>
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10">
-        {techStack.map((tech) => (
-          <div
-            key={tech.name}
-            className="flex flex-col items-center justify-center bg-[#0d0d0e] text-white backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+            <motion.h2
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-center text-[#cc5500]"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            {tech.icon}
-            <span className="mt-3 text-lg font-semibold">{tech.name}</span>
-          </div>
-        ))}
-      </div>
+            My Tech Stack
+          </motion.h2>
+
+      <motion.div
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: { staggerChildren: 0.15 },
+                },
+              }}
+            >
+              {techStack.map((tech) => (
+                <motion.div
+                  key={tech.name}
+                  className="flex flex-col items-center justify-center bg-[#1e1e2b] text-white border border-[#cc5500] backdrop-blur-md p-6 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  whileHover={{ rotate: 2, scale: 1.05 }}
+                >
+                  {tech.icon}
+                  <span className="mt-3 text-lg font-semibold">{tech.name}</span>
+                </motion.div>
+              ))}
+            </motion.div>
     </section>
   );
 }
