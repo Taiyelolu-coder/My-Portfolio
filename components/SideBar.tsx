@@ -52,14 +52,17 @@ export default function MobileSidebar() {
           <Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
             About
           </Link>
-          <Link href="/techstack" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
-            Tech Stack
+          <Link href="/services" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
+            Services
           </Link>
-          <Link href="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
-            Portfolio
+          <Link href="/skills" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
+           Skills
           </Link>
-          <Link href="/#contact" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
+          <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
             Contact
+          </Link>
+           <Link href="/projects" onClick={() => setIsOpen(false)} className="hover:text-[#cc5500]">
+            Projects
           </Link>
         </nav>
 

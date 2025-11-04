@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-4xl text-center">
           {/* Heading */}
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-bold mb-6 mt-12 text-center text-[#cc5500]"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

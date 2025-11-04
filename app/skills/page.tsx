@@ -1,4 +1,4 @@
-"use client"; // if you are using App Router
+"use client"; 
 import React from "react";
 import { motion } from "framer-motion";
 import {

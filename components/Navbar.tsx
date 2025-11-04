@@ -11,10 +11,10 @@ export default function Navbar() {
           <ul className="hidden md:flex space-x-8 font-bold text-[#757a8f]">
             <li><Link href="/" className="hover:text-[#5d5e64]">Home</Link></li>
             <li><Link href="/about" className="hover:text-[#5d5e64]">About</Link></li>
-            <li><Link href="#services" className="hover:text-[#5d5e64]">Services</Link></li>
+            {/* <li><Link href="#services" className="hover:text-[#5d5e64]">Services</Link></li> */}
             <li><Link href="/skills" className="hover:text-[#5d5e64]">Skills</Link></li>
-            <li><Link href="#pricing" className="hover:text-[#5d5e64]">Contact</Link></li>
-            <li><Link href="#experience" className="hover:text-[#5d5e64]">Projects</Link></li>
+            {/* <li><Link href="/contact" className="hover:text-[#5d5e64]">Contact</Link></li> */}
+            <li><Link href="/projects" className="hover:text-[#5d5e64]">Projects</Link></li>
           </ul>
         </div>
       </nav>
